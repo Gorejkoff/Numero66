@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+   @@include('html/1_head.html',{"title":"Catalog"})
+</head>
+
+
+<body>
+
+
+   <div class="wrapper">
+
+
+      @@include('html/2_header.html',{})
+
+
+      <main class="main">
+
+
+         @@include('html/bread_crumbs.html',{"list": [ {"name": "Главная", "link": "index.html"}, {"name": "Каталог", "link": "catalog.html"}]})
+
+
+         <section class="catalog">
+            <div class="catalog__container">
+               <h1 class="title">Швейцарские часы</h1>
+               @@include('html/sort.html',{})
+               <div class="catalog__body">
+                  @@include('html/filter/filter.html',{})
+                  <div class="catalog__list">
+                     @@loop('./html/card.html','json/catalog.json')
+                  </div>
+               </div>
+            </div>
+         </section>
+
+
+         <div class="pagination__container">
+            @@include('html/pagination.html',{})
+         </div>
+
+
+      </main>
+
+
+      @@include('html/button_favourites.html'.{})
+
+      @@include('html/4_footer.html',{})
+
+      @@include('html/modal_choice.html',{})
+
+   </div>
+
+
+   @@include('html/3_scripts.html',{})
+
+
+</body>
+
+</html>

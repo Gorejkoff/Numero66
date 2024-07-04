@@ -1,0 +1,35 @@
+.catalog-block {
+   margin-bottom: 26px;
+
+   @media (min-width:768px) {
+      margin-bottom: 40px;
+   }
+
+   &__container {}
+
+   &__body {
+      margin-bottom: 30px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+
+      @media (min-width:768px) {
+         margin-bottom: 60px;
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+      }
+
+
+      .card {
+         @media (min-width:768px) {
+            flex: 0 0 min(412px, calc((100% - 40px)/3));
+         }
+      }
+   }
+
+   &__more {
+      padding: 26px 30px;
+      width: 100%;
+   }
+}

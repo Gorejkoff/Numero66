@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+   @@include('html/1_head.html',{"title":"Cooperation"})
+</head>
+
+
+<body>
+
+
+   <div class="wrapper">
+
+
+      @@include('html/2_header.html',{})
+
+
+      <main class="main">
+
+         @@include('html/bread_crumbs.html',{"list": [ {"name": "Главная", "link": "index.html"}, {"name": "Сотрудничество", "link": "cooperation.html"}]})
+
+
+         <section class="sub-page">
+            <div class="sub-page__container">
+               <h1 class="title">Сотрудничество</h1>
+               <div class="sub-page__body">
+                  <div class="sub-page__content">
+                     <div class="sub-page__content-title">Оцените и продайте часы за 4 простых шага:</div>
+                     <p>
+                        Мы открыты к коммерческому сотрудничеству.
+                     </p>
+                     <p>
+                        Если Вы обладаете собственной базой клиентов, то для Вас мы готовы предложить наилучшие условия и эксклюзивные предложения.Мы гарантируем полную анонимность.
+                     </p>
+                     <p>
+                        Наша компания уже работает со многими известными байерами, консьерж-сервисами, комиссионными магазинами премиум класса.
+                     </p>
+                     <p>
+                        Вы можете отправить нам в <a class="blue" href="error-404.html">Telegram</a> или <a class="bright-green" href="error-404.html">What’s app.</a></p>
+                  </div>
+                  @@include('html/sup_page_form.html',{})
+               </div>
+            </div>
+         </section>
+
+
+      </main>
+
+
+      @@include('html/button_favourites.html'.{})
+
+
+      @@include('html/4_footer.html',{})
+
+
+   </div>
+
+
+   @@include('html/3_scripts.html',{})
+
+
+</body>
+
+</html>

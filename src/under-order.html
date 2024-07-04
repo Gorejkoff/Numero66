@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+   @@include('html/1_head.html',{"title":"Under order"})
+</head>
+
+
+<body>
+
+
+   <div class="wrapper">
+
+
+      @@include('html/2_header.html',{})
+
+
+      <main class="main">
+
+         @@include('html/bread_crumbs.html',{"list": [ {"name": "Главная", "link": "index.html"}, {"name": "Под заказ", "link": "under-order.html"}]})
+
+
+         <section class="sub-page">
+            <div class="sub-page__container">
+               <h1 class="title">Под заказ</h1>
+               <div class="sub-page__body">
+                  <div class="sub-page__content">
+                     <div class="sub-page__content-title">Как работает наш сервис по поиску?</div>
+                     <ol class="sub-page__content-list">
+                        <li>Отправьте скриншот изделия, которые <br>Вы бы хотели заказать нашим персональным менеджерам в <br>WhatsApp или Telegram. <br>Вы не ограничены ассортиментом, представленным в нашем сайте!</li>
+                        <li>Далее менеджер произведёт уточнения нужных позиций для Вас с <br>помощью наших источников в бутиках, либо у диллеров, которые <br>работают в разных странах.</li>
+                        <li>Наш менеджер договаривается о сроках доставки и рассказывает <br>Вам подробную информацию об изделии, после чего <br>Вы можете забрать свой заказ у нас в офисе в Москве.</li>
+                     </ol>
+                     <p>
+                        Вы можете отправить нам часы, которые хотите заказать через <br><a class="blue" href="error-404.html">Telegram</a> или <a class="bright-green" href="error-404.html">What’s app.</a> <br>Либо через форму оценки снизу
+                     </p>
+                  </div>
+                  @@include('html/sup_page_form.html',{})
+               </div>
+            </div>
+         </section>
+
+
+      </main>
+
+
+      @@include('html/button_favourites.html'.{})
+
+
+      @@include('html/4_footer.html',{})
+
+
+   </div>
+
+
+   @@include('html/3_scripts.html',{})
+
+
+</body>
+
+</html>

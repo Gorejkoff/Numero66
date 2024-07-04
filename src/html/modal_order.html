@@ -1,0 +1,39 @@
+<div id="order" class="modal js-modal-hidden js-modal-close">
+   <div class="modal__body js-modal-stop-close">
+      <div class="modal__title">
+         <span>Заказать | Уточнить цену</span>
+         <button class="modal__close js-modal-close" type="button">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M18.75 1.25L1.25 18.75M1.25004 1.25L18.75 18.75" stroke="#878787" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+         </button>
+      </div>
+      <div class="modal__content">
+         <div class="modal__image">
+            <img src="@img/png/img-1.png" alt="часы">
+         </div>
+         <div class="modal__info">
+            <div class="modal__name">Часы Rolex DeepseaChallenge 50 мм 126067</div>
+            <div class="modal__brand">Rolex</div>
+         </div>
+      </div>
+      <div class="modal__price" data-da=".modal__info,last,768">
+         <div class="modal__price-ruble">21 400 $</div>
+         <div class="modal__price-currency">1 990 200 ₽</div>
+      </div>
+      <form class="modal__form" action="#" method="post" name="" id="">
+         <div class="modal__inputs">
+            <label class="input-enter">
+               <span>Имя</span>
+               <input type="text">
+            </label>
+            <label class="input-enter">
+               <span>Номер</span>
+               <input type="text">
+            </label>
+         </div>
+         <button class="modal__button-submit button-green" type="submit">Отправить</button>
+      </form>
+      @@include('./agreement.html',{})
+   </div>
+</div>

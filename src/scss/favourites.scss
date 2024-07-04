@@ -1,0 +1,32 @@
+.favourites {
+
+   &__container {}
+
+   &__body {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+
+      @media (min-width:768px) {
+         gap: 20px;
+      }
+
+      @media (min-width:1366px) {
+         row-gap: 50px;
+         column-gap: 20px;
+      }
+
+      .card {
+         flex: 0 0 calc((100% - 15px)/2);
+
+         @media (min-width:768px) and (max-width:1919.98px) {
+            flex: 0 0 calc((100% - 40px)/3);
+         }
+
+         @media (min-width:1920px) {
+            flex: 0 0 calc((100% - 60px)/4);
+         }
+      }
+   }
+}

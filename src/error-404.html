@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+   @@include('html/1_head.html',{"title":"error_404"})
+</head>
+
+
+<body>
+
+
+   <div class="wrapper">
+
+
+      @@include('html/2_header.html',{})
+
+
+      <main class="main">
+
+
+         <div class="error-404">
+            <div class="error-404__container">
+               <div class="error-404__image">
+                  <div class="error-404__image-body">
+                     <img src="@img/svg/404.svg" alt="ошибка">
+                  </div>
+               </div>
+               <div class="error-404__content">
+                  <div class="error-404__content-block">
+                     <div class="error-404__title">Страница не найдена</div>
+                     <div class="error-404__text">Такой страницы, к сожалению, не существует.</div>
+                     <a href="index.html" class="error-404__button button-green">вернуться на главную страницу</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+
+      </main>
+
+
+      @@include('html/4_footer.html',{})
+
+
+   </div>
+
+
+   @@include('html/3_scripts.html',{})
+
+
+</body>
+
+</html>

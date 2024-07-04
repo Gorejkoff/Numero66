@@ -1,0 +1,19 @@
+@mixin size_1366_1920 ($prop, $max, $min) {
+   $minpx : $min + px;
+   #{$prop}: calc($minpx + (100vw - 1366px)/(1920 - 1366)*($max - $min));
+}
+
+@mixin size_768_1366 ($prop, $max, $min) {
+   $minpx : $min + px;
+   #{$prop}: calc($minpx + (100vw - 768px)/(1366 - 768)*($max - $min));
+}
+
+@mixin size_1366_1920_flex ($grow, $shrink, $max, $min) {
+   $minpx : $min + px;
+   flex: $grow $shrink calc($minpx + (100vw - 1366px)/(1920 - 1366)*($max - $min));
+}
+
+@mixin size_768_1366_flex ($grow, $shrink, $max, $min) {
+   $minpx : $min + px;
+   flex: $grow $shrink calc($minpx + (100vw - 768px)/(1366 - 768)*($max - $min));
+}

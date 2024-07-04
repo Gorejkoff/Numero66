@@ -1,0 +1,96 @@
+@import "1_fonts";
+@import "2_normalize";
+@import "3_mixin";
+@import "7_colors";
+@import "4_rules";
+@import "main-screen";
+@import "brands";
+@import "bread-crumbs";
+@import "catalog";
+@import "catalog-block";
+@import "card";
+@import "filter";
+@import "pagination";
+@import "product";
+@import "modal";
+@import "favourites";
+@import "sub-page";
+@import "about_us";
+@import "error-404";
+
+body {
+   font-family: "Oswald";
+   font-weight: 400;
+   background-color: var(--color-black);
+
+   @media (min-width:768px) {
+      padding-top: 7px;
+   }
+
+   @media (min-width:1366px) {
+      padding-top: 10px;
+   }
+
+   &.body-overflow,
+   &.sort-open,
+   &.filter-open {
+      overflow: hidden;
+   }
+}
+
+.wrapper {
+   display: flex;
+   flex-direction: column;
+   min-height: 100%;
+}
+
+.main {
+   flex: 1 1 auto;
+}
+
+.button-favourites {
+   position: fixed;
+   top: 40%;
+   right: 0;
+   z-index: 2;
+   padding: 5px 20px 2px;
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   border: 1px solid var(--color-line);
+   border-radius: 20px 20px 0 0;
+   font-size: 14px;
+   line-height: 130%;
+   letter-spacing: 0.03em;
+   transform: rotate(-90deg);
+   transform-origin: 100% 100%;
+   color: var(--color-white);
+   background-color: var(--color-black);
+
+   @media (min-width:768px) {
+      font-size: 16px;
+   }
+
+   @media (min-width:1366px) {
+      padding: 10px 20px;
+   }
+
+   svg {
+      width: 21px;
+      height: 21px;
+   }
+}
+
+
+@import "5_header";
+
+
+
+
+
+
+
+
+
+
+@import "6_footer";

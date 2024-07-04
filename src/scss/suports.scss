@@ -1,0 +1,19 @@
+@supports(max-height: 100dvh) {
+   .menu-modal {
+      @media (max-width:1365.98px) {
+         max-height: 100dvh;
+      }
+   }
+
+   .modal {
+      max-height: 100vh;
+   }
+}
+
+@supports(min-height: 100dvh) {
+   .menu-modal__body {
+      @media (max-width:767.98px) {
+         min-height: 100vh;
+      }
+   }
+}

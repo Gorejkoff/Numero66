@@ -1,0 +1,9 @@
+<div class="catalog-block">
+   <div class="catalog-block__container">
+      <div class="title">Каталог</div>
+      <div class="catalog-block__body">
+         @@loop('./card.html','json/index.json')
+      </div>
+      <button class="catalog-block__more button-transparent" type="button">Показать ещё</button>
+   </div>
+</div>

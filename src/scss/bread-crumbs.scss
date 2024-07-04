@@ -1,0 +1,36 @@
+.bread-crumbs {
+
+
+
+   &__body {
+      padding-top: 20px;
+      padding-bottom: 80px;
+      display: flex;
+      gap: 5px;
+
+      li {
+         &:not(:first-child) {
+            a {
+               &::before {
+                  content: '|';
+                  margin-right: 5px;
+               }
+            }
+         }
+
+         &:last-child {
+            a {
+               pointer-events: none;
+               color: var(--color-white);
+            }
+         }
+      }
+
+      a {
+         font-size: 14px;
+         line-height: 140%;
+         letter-spacing: 0.03em;
+         color: var(--color-grey2);
+      }
+   }
+}
