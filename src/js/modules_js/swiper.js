@@ -6196,6 +6196,7 @@ function initSwiperMain() {
       speed: 300,
       slidesPerView: 1,
       spaceBetween: 10,
+      direction: "vertical",
       pagination: {
          el: '.main-screen__pagination',
          clickable: true,
