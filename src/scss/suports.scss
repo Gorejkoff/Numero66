@@ -17,3 +17,9 @@
       }
    }
 }
+
+@supports(height: 100dvh) {
+   .mobile-menu {
+      height: 100dvh;
+   }
+}

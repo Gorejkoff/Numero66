@@ -3,20 +3,7 @@
 @import "3_mixin";
 @import "7_colors";
 @import "4_rules";
-@import "main-screen";
-@import "brands";
-@import "bread-crumbs";
-@import "catalog";
-@import "catalog-block";
-@import "card";
-@import "filter";
-@import "pagination";
-@import "product";
-@import "modal";
-@import "favourites";
-@import "sub-page";
-@import "about_us";
-@import "error-404";
+
 
 body {
    font-family: "Oswald";
@@ -90,10 +77,20 @@ body {
 
 @import "5_header";
 
-
-
-
-
+@import "main-screen";
+@import "brands";
+@import "bread-crumbs";
+@import "catalog";
+@import "catalog-block";
+@import "card";
+@import "filter";
+@import "pagination";
+@import "product";
+@import "modal";
+@import "favourites";
+@import "sub-page";
+@import "about_us";
+@import "error-404";
 
 
 

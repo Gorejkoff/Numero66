@@ -42,8 +42,6 @@
                border-bottom: none;
             }
          }
-
-
       }
    }
 
@@ -71,7 +69,9 @@
    }
 
    &__link {
-      border: none;
+      @media (max-width:767.98px) {
+         border: none !important;
+      }
 
       @media (min-width:768px) {
          order: 2;
