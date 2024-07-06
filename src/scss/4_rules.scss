@@ -45,7 +45,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .scroll::-webkit-scrollbar-track {
-   background-color: var(--color-grey2);
+   background-color: var(--color-gray2);
 }
 
 .scroll::-webkit-scrollbar-thumb {
@@ -111,24 +111,36 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .up {
-   position: sticky;
-   bottom: 40px;
-   z-index: 10;
-   margin-left: auto;
-   margin-right: 45px;
-   margin-bottom: 40px;
-   padding: 10px 30px;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   gap: 15px;
-   border-radius: 20px;
-   font-size: 16px;
-   line-height: 130%;
-   letter-spacing: 0.03em;
-   color: var(--color-white);
-   background-color: var(--color-black);
-   border: 2px solid var(--color-line);
+   &__container {
+      pointer-events: none;
+      position: sticky;
+      bottom: 40px;
+      z-index: 10;
+   }
+
+   &__item {
+      pointer-events: all;
+      margin-left: auto;
+      margin-right: 5px;
+      margin-bottom: 40px;
+      padding: 10px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      border-radius: 20px;
+      font-size: 16px;
+      line-height: 130%;
+      letter-spacing: 0.03em;
+      color: var(--color-white);
+      background-color: var(--color-black);
+      border: 2px solid var(--color-line);
+      transition: border-color 0.2s;
+
+      &:hover {
+         border-color: var(--color-green);
+      }
+   }
 }
 
 .button-green {
@@ -152,7 +164,7 @@ input[type="number"]::-webkit-outer-spin-button {
    align-items: flex-start;
    justify-content: center;
    width: 100%;
-   max-height: 100dvh;
+   max-height: 100vh;
    min-height: 100%;
    background-color: var(--color-bg-modal);
    overflow-y: auto;
@@ -167,7 +179,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
    &__body {
       @media (max-width:767.98px) {
-         min-height: 100dvh;
+         min-height: 100vh;
       }
 
       @media (max-width:1365.98px) {
@@ -217,7 +229,7 @@ input[type="number"]::-webkit-outer-spin-button {
       font-size: 16px;
       line-height: 130%;
       letter-spacing: 0.03em;
-      color: var(--color-grey2);
+      color: var(--color-gray2);
 
       &:focus {
          border-color: var(--color-white);
@@ -238,7 +250,7 @@ input[type="number"]::-webkit-outer-spin-button {
       font-size: 16px;
       line-height: 130%;
       letter-spacing: 0.03em;
-      color: var(--color-grey2);
+      color: var(--color-gray2);
 
       &:focus {
          border-color: var(--color-white);
@@ -276,5 +288,35 @@ input[type="number"]::-webkit-outer-spin-button {
       color: inherit;
       font-size: inherit;
       text-decoration: underline;
+   }
+}
+
+._pc .hover-menu {
+   transition: all 0.2s;
+
+   &:hover {
+      background-color: var(--color-white);
+      color: var(--color-black);
+
+      path {
+         fill: var(--color-black);
+      }
+   }
+
+}
+
+._pc .hover-gray {
+   transition: all 0.2s;
+
+   .svg-hover {
+      transition: fill 0.2s;
+   }
+
+   &:hover {
+      color: var(--color-gray2);
+
+      .svg-hover {
+         fill: var(--color-gray2);
+      }
    }
 }

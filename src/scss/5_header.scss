@@ -1,6 +1,6 @@
 .header {
    position: relative;
-   z-index: 2;
+   z-index: 5;
    color: var(--color-white);
    border-bottom: 1px solid var(--color-line);
    border-top: 1px solid var(--color-line);
@@ -116,7 +116,7 @@
          position: absolute;
          top: 100%;
          left: 0;
-         z-index: 2;
+         z-index: 21;
          width: 100vw;
          min-height: auto;
          height: 0;
@@ -132,7 +132,6 @@
 
       @media (min-width:1366px) {
          grid-column: span 2;
-         border: none;
       }
 
       form {
@@ -146,7 +145,7 @@
          width: 100%;
          height: 100%;
          font-size: 16px;
-         color: var(--color-grey3);
+         color: var(--color-gray3);
          background-color: var(--color-black);
          border-bottom: 2px solid transparent;
 
@@ -191,7 +190,7 @@
       align-items: center;
       justify-content: center;
       font-size: 18px;
-      color: var(--color-grey3);
+      color: var(--color-gray3);
 
       button {
          margin-bottom: -0.25em;
@@ -249,11 +248,21 @@
    &__menu {
       position: relative;
 
-      button {
+      a {
          display: flex;
          align-items: center;
          gap: 10px;
          font-size: 20px;
+      }
+
+      svg {
+         transition: transform 0.2s;
+      }
+
+      &.js-tab-open {
+         svg {
+            transform: rotate3d(1, 0, 0, 180deg);
+         }
       }
    }
 
@@ -303,7 +312,7 @@
             line-height: 130%;
 
             &:hover {
-               color: var(--color-grey2);
+               color: var(--color-gray2);
             }
          }
       }
@@ -362,10 +371,12 @@
    position: absolute;
    top: calc(100% + 1px);
    left: -120%;
-   z-index: 20;
+   z-index: 5;
    width: 100%;
+   height: 100dvh;
    background-color: var(--color-black);
    transition: left 0.3s;
+   overflow-y: auto;
 
    .menu-open & {
       left: 0;

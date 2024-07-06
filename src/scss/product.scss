@@ -179,7 +179,7 @@
       font-size: 14px;
       line-height: 130%;
       letter-spacing: 0.03em;
-      color: var(--color-grey2);
+      color: var(--color-gray2);
 
       @media (min-width:1366px) {
          font-size: 16px;
@@ -272,7 +272,7 @@
       line-height: 120%;
       letter-spacing: 0.03em;
       text-transform: uppercase;
-      color: var(--color-grey3);
+      color: var(--color-gray3);
 
       a {
          padding: 15px;
@@ -316,7 +316,7 @@
    &__price-rubles {
       font-size: 18px;
       line-height: 120%;
-      color: var(--color-grey3);
+      color: var(--color-gray3);
 
       @media (min-width:768px) {
          font-size: 20px;
@@ -416,7 +416,7 @@
    }
 
    &__guarantees-content {
-      color: var(--color-grey2);
+      color: var(--color-gray2);
 
       @media (min-width:1366px) {
          padding-right: 30px;
@@ -477,7 +477,7 @@
          line-height: 120%;
          letter-spacing: 0.03em;
          text-transform: uppercase;
-         color: var(--color-grey3);
+         color: var(--color-gray3);
 
          @media (min-width:768px) {
             font-size: 18px;
@@ -488,7 +488,7 @@
          font-size: 14px;
          line-height: 130%;
          letter-spacing: 0.03em;
-         color: var(--color-grey2);
+         color: var(--color-gray2);
 
          @media (min-width:768px) {
             font-size: 16px;

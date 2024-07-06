@@ -1,4 +1,9 @@
 .favourites {
+   margin-bottom: 60px;
+
+   @media (min-width:768px) {
+      margin-bottom: 120px;
+   }
 
    &__container {}
 

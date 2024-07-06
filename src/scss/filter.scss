@@ -36,7 +36,7 @@
       font-size: 16px;
       line-height: 130%;
       letter-spacing: 0.03em;
-      color: var(--color-grey3);
+      color: var(--color-gray3);
 
       .clear-hidden & {
          display: none;
@@ -116,6 +116,13 @@
          border-radius: 50%;
       }
 
+      & img {
+         transition: transform 0.2s;
+      }
+
+      .open-category & img {
+         transform: rotate3d(1, 0, 0, 180deg);
+      }
 
    }
 
@@ -190,7 +197,7 @@
 
    &__min,
    &__max {
-      border: 1px solid var(--color-grey2);
+      border: 1px solid var(--color-gray2);
       border-radius: 20px;
       padding: 10px 10px 12px 10px;
       width: 101px;
@@ -212,9 +219,9 @@
       margin-left: 18px;
       height: 4px;
       width: calc(100% - 18px);
-      background: linear-gradient(90deg, var(--color-grey3) 0% var(--minGradient),
+      background: linear-gradient(90deg, var(--color-gray3) 0% var(--minGradient),
             var(--color-green) var(--minGradient) var(--maxGradient),
-            var(--color-grey3) var(--maxGradient) 100%);
+            var(--color-gray3) var(--maxGradient) 100%);
    }
 
    &__spin-min,
@@ -271,7 +278,7 @@
          display: flex;
          align-items: center;
          justify-content: center;
-         border: 1px solid var(--color-grey2);
+         border: 1px solid var(--color-gray2);
          border-radius: 20px;
          padding: 10px 10px 12px 10px;
          width: 100%;
@@ -292,7 +299,7 @@
       margin-left: 15px;
       margin-right: -16px;
       flex: 0 0 4px;
-      background-color: var(--color-grey2);
+      background-color: var(--color-gray2);
 
       &::after {
          content: '';
@@ -332,7 +339,7 @@
       display: none;
 
       &:checked+span {
-         color: var(--color-grey2);
+         color: var(--color-gray2);
       }
    }
 
@@ -391,7 +398,7 @@
          left: 0;
          z-index: 4;
          border-radius: 20px;
-         border-bottom: 1px solid var(--color-grey3);
+         border-bottom: 1px solid var(--color-gray3);
          background-color: var(--color-white);
          color: var(--color-black);
          display: none;
@@ -405,7 +412,11 @@
 
          @media (min-width:1366px) {
             padding: 0;
-            border: navajowhite;
+            border: none;
+         }
+
+         ._pc &:hover {
+            color: var(--color-gray2);
          }
 
          &:not(:last-child) {
@@ -420,7 +431,7 @@
 
    &__button {
       position: relative;
-      z-index: 5;
+      z-index: 1;
       padding: 10px 0;
       display: flex;
       align-items: center;

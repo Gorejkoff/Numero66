@@ -19,6 +19,19 @@ const MIN1366 = window.matchMedia('(min-width: 1366px)');
 
 const MAIN_SCREEN_SLIDE = document.querySelectorAll('.main-screen__slide');
 const SORT_BODY = document.querySelector('.sort__body');
+const UP_BUTTON = document.querySelector('#up');
+
+function throttle(callee, timeout) {
+   let timer = null;
+   return function perform(...args) {
+      if (timer) return;
+      timer = setTimeout(() => {
+         callee(...args);
+         clearTimeout(timer);
+         timer = null;
+      }, timeout)
+   }
+}
 
 document.addEventListener('click', (event) => {
    // открывает, закрывает меню в мобильном
@@ -60,7 +73,35 @@ document.addEventListener('click', (event) => {
          openProductTab(parent);
       }
    }
+   // отменяет переход по ссылке при экране меньше 1366px
+   if (!MIN1366.matches && event.target.closest('.prevent-default-1366')) {
+      event.preventDefault();
+   }
+   if (event.target.closest('.card__favourites')) {
+      event.preventDefault();
+   }
+   // скролл вверх
+   if (event.target.closest('.up__item')) {
+      window.scrollTo({ top: 0, behavior: "smooth" })
+   }
+
 })
+
+const testingScrollThrottle = throttle(testingScroll, 100);
+window.addEventListener('scroll', (event) => {
+   if (UP_BUTTON) {
+      testingScrollThrottle()
+   }
+})
+
+function testingScroll() {
+   if (scrollY < 200) {
+      UP_BUTTON.setAttribute('hidden', '');
+   } else {
+      UP_BUTTON.removeAttribute('hidden');
+   }
+}
+
 function openProductTab(parent) {
    let height = parent.querySelector('.js-inner-tab').clientHeight;
    parent.classList.add('js-open');
@@ -218,11 +259,11 @@ if (document.querySelector('.filter')) {
    !isPC && SPIN_MIN.addEventListener('touchstart', startEvent);
    !isPC && document.addEventListener('touchend', andEvent);
 
-   INPUT_MAX.addEventListener('input', () => {
+   INPUT_MAX.addEventListener('change', () => {
       validationInput(INPUT_MAX);
       setRange(INPUT_MAX, SPIN_MAX);
    });
-   INPUT_MIN.addEventListener('input', () => {
+   INPUT_MIN.addEventListener('change', () => {
       validationInput(INPUT_MIN);
       setRange(INPUT_MIN, SPIN_MIN);
    });

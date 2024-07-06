@@ -38,11 +38,11 @@ if (document.querySelector('.filter')) {
    !isPC && SPIN_MIN.addEventListener('touchstart', startEvent);
    !isPC && document.addEventListener('touchend', andEvent);
 
-   INPUT_MAX.addEventListener('input', () => {
+   INPUT_MAX.addEventListener('change', () => {
       validationInput(INPUT_MAX);
       setRange(INPUT_MAX, SPIN_MAX);
    });
-   INPUT_MIN.addEventListener('input', () => {
+   INPUT_MIN.addEventListener('change', () => {
       validationInput(INPUT_MIN);
       setRange(INPUT_MIN, SPIN_MIN);
    });
