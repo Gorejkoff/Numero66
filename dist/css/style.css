@@ -3599,14 +3599,6 @@ body.filter-open {
             flex-direction: column;
   }
 
-  .favourites__body .card {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 calc((100% - 40px) / 3);
-            flex: 0 0 calc((100% - 40px) / 3);
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1920px) {
   .product__swiper-thumbs {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
@@ -3629,5 +3621,11 @@ body.filter-open {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
+  }
+
+  .favourites__body .card {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc((100% - 40px) / 3);
+            flex: 0 0 calc((100% - 40px) / 3);
   }
 }
