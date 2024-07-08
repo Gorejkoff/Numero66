@@ -432,11 +432,13 @@ input[type=number]::-webkit-outer-spin-button {
 ._pc .hover-menu {
   transition: all 0.2s;
 }
-._pc .hover-menu:hover {
+._pc .hover-menu:hover button,
+._pc .hover-menu:hover a {
   background-color: var(--color-white);
   color: var(--color-black);
 }
-._pc .hover-menu:hover path {
+._pc .hover-menu:hover button path,
+._pc .hover-menu:hover a path {
   fill: var(--color-black);
 }
 
@@ -522,7 +524,7 @@ body.menu-open, body.body-overflow, body.sort-open, body.filter-open {
 
 .header {
   position: relative;
-  z-index: 5;
+  z-index: 20;
   color: var(--color-white);
   border-bottom: 1px solid var(--color-line);
   border-top: 1px solid var(--color-line);
@@ -790,6 +792,7 @@ body.menu-open, body.body-overflow, body.sort-open, body.filter-open {
   align-items: center;
   gap: 10px;
   font-size: 14px;
+  white-space: nowrap;
   line-height: 140%;
   letter-spacing: 0.03em;
   transition: color 0.2s;
@@ -1676,7 +1679,7 @@ body.menu-open, body.body-overflow, body.sort-open, body.filter-open {
 }
 .sort__button {
   position: relative;
-  z-index: 1;
+  z-index: 5;
   padding: 10px 0;
   display: flex;
   align-items: center;
@@ -2205,7 +2208,7 @@ body.menu-open, body.body-overflow, body.sort-open, body.filter-open {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 30;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -2290,6 +2293,8 @@ body.menu-open, body.body-overflow, body.sort-open, body.filter-open {
   border-radius: 20px;
   padding: 20px 30px;
   background-color: var(--color-line);
+  font-size: 20px;
+  line-height: 120%;
 }
 @media (min-width: 768px) {
   .modal__price {
@@ -2297,8 +2302,6 @@ body.menu-open, body.body-overflow, body.sort-open, body.filter-open {
   }
 }
 .modal__price-currency {
-  font-size: 20px;
-  line-height: 120%;
   color: var(--color-gray3);
 }
 .modal__form {

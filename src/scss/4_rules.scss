@@ -295,14 +295,17 @@ input[type="number"]::-webkit-outer-spin-button {
    transition: all 0.2s;
 
    &:hover {
-      background-color: var(--color-white);
-      color: var(--color-black);
 
-      path {
-         fill: var(--color-black);
+      button,
+      a {
+         background-color: var(--color-white);
+         color: var(--color-black);
+
+         path {
+            fill: var(--color-black);
+         }
       }
    }
-
 }
 
 ._pc .hover-gray {
