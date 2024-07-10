@@ -3180,7 +3180,7 @@ body.filter-open {
     line-height: 130%;
   }
 
-  .header__menu-list a:hover {
+  ._pc .header__menu-list a:hover {
     color: var(--color-gray2);
   }
 
