@@ -25,7 +25,13 @@
          @media (min-width:768px) {
             flex: 0 0 min(412px, calc((100% - 40px)/3));
          }
+
+         @media (min-width:1600px) {
+            flex: 0 0 calc((100% - 60px)/4);
+         }
       }
+
+
    }
 
    &__more {

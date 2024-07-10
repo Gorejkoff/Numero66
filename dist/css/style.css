@@ -3430,6 +3430,14 @@ body.filter-open {
   }
 }
 
+@media (min-width: 1600px) {
+  .catalog-block__body .card {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc((100% - 60px) / 4);
+            flex: 0 0 calc((100% - 60px) / 4);
+  }
+}
+
 @media (min-width: 1920px) {
   [class*=__container] {
     padding-left: 106px;
