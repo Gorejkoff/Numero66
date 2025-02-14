@@ -160,6 +160,6 @@ function closeFilter() {
 const RUNNING_LINE = document.querySelector('.brands__block');
 if (RUNNING_LINE) {
    const clonElement = RUNNING_LINE.cloneNode(true);
-   clonElement.setAttribute('aria-hidden', 'true');
+   // clonElement.setAttribute('aria-hidden', 'true');
    RUNNING_LINE.parentNode.append(clonElement);
 }
